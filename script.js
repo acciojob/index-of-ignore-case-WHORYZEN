@@ -1,6 +1,6 @@
 function indexOfIgnoreCase(str: string, subStr: string): number {
-
-    if (str.length === 0 || subStr.length === 0 || subStr.length > str.length) {
+    // Check for edge cases
+    if (!str || !subStr || subStr.length > str.length) {
         return -1;
     }
 
@@ -9,7 +9,6 @@ function indexOfIgnoreCase(str: string, subStr: string): number {
 
     return lowerStr.indexOf(lowerSubStr);
 }
-
 
 // Please do not change the code below
 const s1 = prompt("Enter s1:");
